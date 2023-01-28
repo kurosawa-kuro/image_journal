@@ -20,14 +20,16 @@ export default function Home(props: { hello: Props[] }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1>Next.js App</h1>
-        {
-          props.hello.map((x: Props, index: number) => {
-            return <li key={index}>
-              {x.data}
-            </li>
-          })
-        }
+        <h1 className={styles.h1}>Next.js App</h1>
+        <div>
+          {
+            props.hello.map((x: Props, index: number) => {
+              return <li key={index}>
+                {x.data}
+              </li>
+            })
+          }
+        </div>
       </main>
     </>
   )
